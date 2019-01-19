@@ -55,7 +55,7 @@ def display():
     fillTriangle(aame, baseTriangle, baseColor)
     draw4Sections(aame, baseTriangle, removecolor, 0, depthRequired)
 
-    pass
+    turtle.done()
 
 if __name__ == '__main__':
     display()

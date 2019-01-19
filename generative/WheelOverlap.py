@@ -25,9 +25,7 @@ def display():
                 t.pencolor(colors[i%7])
                 t.forward(100)
                 t.left(3)
-    
-    t.down()
-
+    turtle.done()
 
 if __name__ == '__main__':
     display()
