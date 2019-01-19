@@ -54,14 +54,15 @@ def display():
     screen.bgcolor('black')
     aame.pencolor('white')
     aame.pensize(2)
+    aame.speed(0)
+
     pos = aame.position()
     length = 200
 
     queue = []
-    print(pos)
     queue.append((pos, length))
 
-    numIterations = 18
+    numIterations = 250
 
     for i in range(0, numIterations, 1):
         (pos, length) = queue.pop(0)
