@@ -14,7 +14,7 @@ class LSystem:
     def display(self, turtle1=turtle.Pen()):
         for _ in range(0, self.iterations):
             self.__apply_rules()
-        self.__draw_turtle_fn(self.fn_dict, turtle1)
+        self.__draw_turtle_fn(turtle1)
 
     def __apply_rules(self):
         new_state = ''
@@ -23,10 +23,10 @@ class LSystem:
             new_state = new_state + translated_chars
         self.state_string = new_state
 
-    def __draw_turtle_fn(self, fn_dict, turtle1):
+    def __draw_turtle_fn(self, turtle1):
         for char in self.state_string:
-            if char in fn_dict:
-                fn = fn_dict[char]
+            if char in self.fn_dict:
+                fn = self.fn_dict[char]
                 fn(turtle1)
 
     def end_this(self):
