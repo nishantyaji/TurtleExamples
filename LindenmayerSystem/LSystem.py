@@ -31,16 +31,3 @@ class LSystem:
 
     def end_this(self):
         turtle.done()
-
-if __name__ == '__main__':
-    rules_dict={'F':'F-F++F-F'}
-    start_string='F'
-    measures_dict = {'length':2, 'angle':60}
-    fn_dict = {'F':lambda turtle1: turtle1.forward(measures_dict['length']), 
-            'B':lambda turtle1: turtle1.backward(measures_dict['length']),
-            '-':lambda turtle1: turtle1.left(measures_dict['angle']),
-            '+':lambda turtle1: turtle1.right(measures_dict['angle']),}
-
-    ls = LSystem(start_string=start_string, rules_dict=rules_dict, iterations=4, fn_dict=fn_dict)
-    ls.display()
-    ls.end_this()
